@@ -1,0 +1,156 @@
+# name: Muhammad
+# role: Developer
+# skills: [Python, JavaScript, SQL]
+# skill:
+#   - Python
+#   - JavaScript
+#   - SQL
+
+# user:
+#   name: Muhammad
+#   role: Developer
+#   skills:
+#     - Python
+#     - JavaScript
+#     - SQL
+#   contact: 
+#    - email: mq81040@gmail.com
+#    - phone: +1234567890
+#    - address:
+#       street: 123 Main St
+#       city: Anytown
+#       state: CA
+#       zip: 12345
+#   bio: >
+#     Muhammad is a skilled developer with expertise in Python, JavaScript, and SQL.
+#     He has worked on various projects ranging from web development to data analysis.
+#     In his free time, he enjoys contributing to open-source projects and learning new technologies.
+#   projects: |
+#     - Project A: A web application built with Django and React.
+#     - Project B: A data analysis tool using Python and Pandas.
+#     - Project C: An e-commerce platform developed with Node.js and MongoDB.
+  
+
+# Profile:
+    # name: Muhammad
+    # role: Developer
+    # skills:
+    #   - Python
+    #   - JavaScript
+    #   - SQL
+    # contact: 
+    #  - email: mq81040@gmail.com
+    #  - phone: +1234567890
+    #  - address:
+    #     street: 123 Main St
+    #     city: Anytown
+    #     state: CA
+    #     zip: 12345
+    # bio: >
+    #   Muhammad is a skilled developer with expertise in Python, JavaScript, and SQL.
+    #   He has worked on various projects ranging from web development to data analysis.
+    #   In his free time, he enjoys contributing to open-source projects and learning new technologies.
+    # projects: |
+    #   - Project A: A web application built with Django and React.
+    #   - Project B: A data analysis tool using Python and Pandas.
+    #   - Project C: An e-commerce platform developed with Node.js and MongoDB.
+      
+
+# app_config:
+#   version: 1.0.0
+#   debug: true
+#   database:
+#     host: localhost
+#     port: 5432
+#     username: admin
+#     password: secret
+
+
+# list of users
+
+# user:
+#   - name: Muhammad
+#     role: Developer
+#     skills:
+#       - Python
+#       - JavaScript
+#       - SQL
+#     contact: 
+#       email: mq881040@mgial.com
+#       address:
+#         street: 123 Main St
+#         city: Anytown
+#         state: CA
+#         zip: 12345
+#   - name: Qasim
+#     role: Developer
+#     skills:
+#       - Python
+#       - JavaScript
+#       - SQL
+#     contact: 
+#       email: mq881040@mgial.com
+#       address:
+#         street: 123 Main St
+#         city: Anytown
+#         state: CA
+#         zip: 12345
+#   - name: Yousaf
+#     role: Developer
+#     skills:
+#       - Python
+#       - JavaScript
+#       - SQL
+#     contact: 
+#       email: mq881040@mgial.com
+#       address:
+#         street: 123 Main St
+#         city: Anytown
+#         state: CA
+#         zip: 12345
+
+
+# Docker like service
+
+
+# version: '3'
+# services:
+  # web:
+  #   image: nginx:latest
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./html:/usr/share/nginx/html
+  # database:
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_USER: admin
+  #     POSTGRES_PASSWORD: secret
+  #     POSTGRES_DB: mydb
+  #   ports:
+  #     - "5432:5432"
+
+
+# CI Pipe Line
+
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
+  - name: Set up Python
+    uses: actions/setup-python@v2
+    with:
+      python-version: '3.8'
+  - name: Install dependencies
+    run: |
+      pip install -r requirements.txt
+  - name: Run tests
+    run: |
+      pytest tests/
+  - name: Build application
+    run: |
+      python setup.py build
+  - name: Deploy application
+    if: success()
+    run: |
+      echo "Deploying application..."
+  
